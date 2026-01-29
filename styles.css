@@ -1,4 +1,6 @@
 /* styles.css */
+
+/* RESET GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,7 @@ body {
   color: #333;
 }
 
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -38,14 +41,17 @@ body {
   text-decoration: none;
 }
 
+/* BOTÓN MENÚ */
 .menu-btn {
   display: none;
   background: none;
   color: #fff;
   font-size: 24px;
   border: none;
+  cursor: pointer;
 }
 
+/* HERO */
 .hero {
   padding: 120px 20px 80px;
   background: linear-gradient(135deg, #000, #333);
@@ -53,6 +59,7 @@ body {
   text-align: center;
 }
 
+/* SECCIONES */
 .section {
   padding: 60px 20px;
   max-width: 1100px;
@@ -64,39 +71,50 @@ body {
   text-align: center;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
+/* CARD */
 .card {
   background: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s;
+  overflow: visible; /* FIX IMPORTANTE */
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
+/* ==== FIX DEFINITIVO PARA IMÁGENES ==== */
 .card img {
+  display: block;          /* OBLIGATORIO */
   width: 100%;
+  height: 180px;           /* OBLIGATORIO */
+  object-fit: cover;       /* EVITA DEFORMACIÓN */
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 
+/* LISTAS */
 .list {
   list-style: disc;
   padding-left: 40px;
 }
 
+/* BOTONES */
 .btn {
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .primary {
@@ -104,6 +122,7 @@ body {
   color: #000;
 }
 
+/* FORMULARIO */
 form {
   max-width: 500px;
   margin: auto;
@@ -112,12 +131,14 @@ form {
   gap: 15px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
+/* FOOTER */
 .footer {
   background: #111;
   color: #fff;
@@ -125,6 +146,7 @@ input, textarea {
   padding: 20px;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav {
     position: absolute;
